@@ -23,7 +23,7 @@ const user : {
     lastName: 'Rafee',
     isMarried: false,
 }
-user.organization = "Programming Hero Fire";
+//user.organization = "Programming Hero Fire";
 console.log(user);
 
 

@@ -18,6 +18,13 @@ const poorUser  = {
     balance : 0,
     addBalance(value : number) : number{
        return this.balance + value ;
-    }
-}
+    },
+};
+
+poorUser.addBalance(100000);
+
+// callback function
+const arr : number[] = [1 , 2 , 6];
+const sqrArr = arr.map((element : number) : number => element * element)
+
 
