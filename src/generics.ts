@@ -19,7 +19,9 @@ const coordinance2: CoOrdinance<string, string> = ['20', '30'];
 
 
 // generic for array of objects
-const userList : GenericArray<{name:string , age:number}> = [
+
+type User = {name:string , age:number};
+const userList : GenericArray<User> = [
     {
         name: 'Mr. X',
         age: 26,
