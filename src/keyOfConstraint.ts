@@ -12,8 +12,14 @@ type MyVehicle2 =  keyof RichPeopleVehicle;
 
  const MyVehicle : MyVehicle2 = 'bike';
 
-
- const user={
+type User = {
+    id: number,
+    name: string,
+    address:{
+        city: string,
+    }
+}
+ const user : User={
     id: 88,
     name: 'Rafee',
     address:{
@@ -29,14 +35,18 @@ type MyVehicle2 =  keyof RichPeopleVehicle;
 
  //console.log({myName , myId , myAddress});
  
-
- const getPropertyFromObj = (obj: object , key: string) =>{
+ 
+ const getPropertyFromObj =<X> (obj: X , key: keyof X) =>{
     return obj[key]
  }
 
  const result = getPropertyFromObj(user ,  "name");
  console.log(result);
 
-// 12.05
+const product = {
+    brand: 'HP',
 
+};
+
+const result2 = getPropertyFromObj(product , 'brand');
 
