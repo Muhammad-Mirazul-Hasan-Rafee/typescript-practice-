@@ -1,5 +1,5 @@
 // constraint = enforcing strict rules
-type Student = {id:number , name: string};
+type Student = {id:number , name: string , dob: string , class: string , hasCard: boolean};
  const addStudentToCourse = <T extends Student > (studentInfo: T) =>
  {return{
     course: 'Next Level Web Development',
@@ -11,11 +11,17 @@ type Student = {id:number , name: string};
     id:88,
     name: 'Rafee',
     hasPen: true,
+    dob:'2000-01-27',
+    class: 'HONS',
+    hasCard:true,
  };
 
  const student2 = {
     id:10,
     name: 'Jhankar Mahbub',
+    dob:'2000-01-27',
+    class: 'MSC',
+    hasCard:true,
     hasCar: true,
     isMarried: true,
  };
