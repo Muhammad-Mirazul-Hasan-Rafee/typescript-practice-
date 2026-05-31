@@ -3,7 +3,9 @@
 type A = null;
 type B = undefined;
 
+
 type C = A extends number ? true : B extends undefined ? true : false;
+
 
 
 type RichPeopleVehicle = {
@@ -15,4 +17,6 @@ type RichPeopleVehicle = {
 
 type CheckVehicle <T> = T extends keyof RichPeopleVehicle ? "Yes! I have." : "I don't have!";
 
+
 type HasBike = CheckVehicle<'jetplane'>; 
+type HasCycle = CheckVehicle<'cycle'>;
